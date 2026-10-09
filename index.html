@@ -3,76 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joartoxx news — Les actualités du village</title>
-  <meta name="description" content="Joartoxx news : les actualités de notre village sur le serveur Minecraft.">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Jonhy Italian News — La mafia du serveur</title>
+  <meta name="description" content="Jonhy Italian News : le journal officiel de la mafia du serveur. Constructions, audaces et règlements de comptes, sans filtre.">
+  <meta name="theme-color" content="#07080b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header" id="site-header">
   <div class="entete">
-    <a href="index.html" class="logo">Joartoxx <span>news</span></a>
-    <nav>
-      <a href="index.html" class="actif">Accueil</a>
-      <a href="about.html">À propos</a>
+    <a href="index.html" class="logo">
+      <span class="logo__marque" aria-hidden="true">
+        <svg viewBox="0 0 16 16" shape-rendering="crispEdges" focusable="false">
+          <rect width="16" height="16" fill="#0b0d12"/>
+          <rect x="1" y="1" width="14" height="14" fill="none" stroke="#6d5714" stroke-width="1"/>
+          <g fill="#e3c264">
+            <rect x="3" y="2" width="10" height="2"/>
+            <rect x="9" y="4" width="2" height="8"/>
+            <rect x="3" y="10" width="2" height="2"/>
+            <rect x="5" y="12" width="6" height="2"/>
+          </g>
+        </svg>
+      </span>
+      <span class="logo__texte">Jonhy Italian<span class="logo__sous-titre">News</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html" class="actif" aria-current="page">Accueil</a>
+      <a href="about.html">La maison</a>
     </nav>
+
+    <div class="entete__actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Passer en thème clair">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.5"/>
+          <g stroke-linecap="round">
+            <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.2 5.2l1.8 1.8M17 17l1.8 1.8M18.8 5.2 17 7M7 17l-1.8 1.8"/>
+          </g>
+        </svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+        </svg>
+      </button>
+
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<main>
+<main id="contenu">
+
   <section class="banniere">
-    <h1>Bienvenue au village !</h1>
-    <p>Toute l'actualité de notre village Minecraft : constructions, aventures, événements et potins entre amis.</p>
+    <p class="banniere__surtitre">Organisation · Serveur privé</p>
+    <h1>Jonhy Italian News</h1>
+    <p class="banniere__lead">Le journal officiel de la famille. Constructions, audaces, règlements de comptes et pots-de-vin : tout ce qui se passe sur le serveur, sans filtre.</p>
+    <div class="banniere__stats">
+      <div class="stat"><span class="stat__valeur">5</span><span class="stat__label">articles publiés</span></div>
+      <div class="stat"><span class="stat__valeur">1</span><span class="stat__label">famille</span></div>
+      <div class="stat"><span class="stat__valeur">0</span><span class="stat__label">témoin survivant</span></div>
+    </div>
   </section>
 
-  <h2 class="titre-section">Dernières nouvelles</h2>
+  <h2 class="titre-section">Derniers communiqués</h2>
 
   <div class="grille">
     <!-- DEBUT-ARTICLES (ne pas supprimer cette ligne : le générateur C++ ajoute les cartes ici) -->
 
-    <div class="carte">
-      <span class="etiquette">a</span>
-      <h3><a href="article-3.html">a</a></h3>
-      <p class="meta">a · par </p>
-      <p></p>
-    </div>
-
-    <div class="carte">
-      <span class="etiquette">Racisme</span>
-      <h3><a href="article-5.html">Les arabes dans minecraft</a></h3>
-      <p class="meta">8 Octobre 2026 · par Swennito</p>
-      <p>"Il y en a trop ici !"</p>
-    </div>
-
-    <div class="carte">
+    <article class="carte">
       <span class="etiquette">Construction</span>
-      <h3><a href="article-3.html">Le marché du village est enfin ouvert !</a></h3>
-      <p class="meta">8 octobre 2026 · par Joartoxx</p>
-      <p>Étals, villageois et coffres à échanger : le nouveau marché attire déjà du monde.</p>
-    </div>
+      <h3><a href="article-5.html">Le prochain chantier : une maison toscane</a></h3>
+      <p class="meta"><time datetime="2026-10-10">10 octobre 2026</time> · par Joartoxx</p>
+      <p>Toit de tuiles, façade ocre, cyprès et fer forgé : le premier vrai projet de la maison.</p>
+    </article>
 
-    <div class="carte">
+    <article class="carte">
+      <span class="etiquette">Politique</span>
+      <h3><a href="article-4.html">Le nouveau maire, et ce qu'il cache</a></h3>
+      <p class="meta"><time datetime="2026-10-09">9 octobre 2026</time> · par Joartoxx</p>
+      <p>Élu à l'unanimité, puis disparu trois jours plus tard. La maison, elle, sait exactement de quoi il parle.</p>
+    </article>
+
+    <article class="carte">
+      <span class="etiquette">Construction</span>
+      <h3><a href="article-3.html">Le marché du village est enfin ouvert&nbsp;!</a></h3>
+      <p class="meta"><time datetime="2026-10-08">8 octobre 2026</time> · par Joartoxx</p>
+      <p>Étals, villageois et coffres à échanger : le nouveau marché attire déjà du monde.</p>
+    </article>
+
+    <article class="carte">
       <span class="etiquette">Événement</span>
       <h3><a href="article-2.html">Course de bateaux sur le lac</a></h3>
-      <p class="meta">5 octobre 2026 · par Joartoxx</p>
+      <p class="meta"><time datetime="2026-10-05">5 octobre 2026</time> · par Joartoxx</p>
       <p>Cinq équipes, un seul vainqueur et beaucoup de naufrages. Retour sur la course.</p>
-    </div>
+    </article>
 
-    <div class="carte">
+    <article class="carte">
       <span class="etiquette">Annonce</span>
       <h3><a href="article-1.html">Fondation du village : tout a commencé ici</a></h3>
-      <p class="meta">1 octobre 2026 · par Joartoxx</p>
+      <p class="meta"><time datetime="2026-10-01">1 octobre 2026</time> · par Joartoxx</p>
       <p>Retour sur les premiers jours du village et sur ceux qui l'ont construit.</p>
-    </div>
+    </article>
 
     <!-- FIN-ARTICLES -->
   </div>
+
 </main>
 
-<footer>
-  <p>© 2026 Joartoxx news — Le journal (très sérieux) de notre village Minecraft.</p>
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Jonhy Italian News — Le journal de la famille. Rien n'est jamais vraiment confidentiel.</p>
 </footer>
 
+<script src="app.js"></script>
 </body>
 </html>

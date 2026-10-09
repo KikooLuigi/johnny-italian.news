@@ -3,45 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À propos — Joartoxx news</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>La maison — Jonhy Italian News</title>
+  <meta name="description" content="Qui sommes-nous, comment fonctionne la famille, et comment nous contacter.">
+  <meta name="theme-color" content="#07080b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header" id="site-header">
   <div class="entete">
-    <a href="index.html" class="logo">Joartoxx <span>news</span></a>
-    <nav>
+    <a href="index.html" class="logo">
+      <span class="logo__marque" aria-hidden="true">
+        <svg viewBox="0 0 16 16" shape-rendering="crispEdges" focusable="false">
+          <rect width="16" height="16" fill="#0b0d12"/>
+          <rect x="1" y="1" width="14" height="14" fill="none" stroke="#6d5714" stroke-width="1"/>
+          <g fill="#e3c264">
+            <rect x="3" y="2" width="10" height="2"/>
+            <rect x="9" y="4" width="2" height="8"/>
+            <rect x="3" y="10" width="2" height="2"/>
+            <rect x="5" y="12" width="6" height="2"/>
+          </g>
+        </svg>
+      </span>
+      <span class="logo__texte">Jonhy Italian<span class="logo__sous-titre">News</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
-      <a href="about.html" class="actif">À propos</a>
+      <a href="about.html" class="actif" aria-current="page">La maison</a>
     </nav>
+
+    <div class="entete__actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Passer en thème clair">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.5"/>
+          <g stroke-linecap="round">
+            <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.2 5.2l1.8 1.8M17 17l1.8 1.8M18.8 5.2 17 7M7 17l-1.8 1.8"/>
+          </g>
+        </svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+        </svg>
+      </button>
+
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<main>
+<main id="contenu">
   <article class="page">
-    <h1>À propos de Joartoxx news</h1>
-    <p class="meta">Le journal officiel (et officieux) du village</p>
+    <h1>La maison</h1>
+    <p class="meta">Présentation de la famille</p>
 
-    <p>Joartoxx news est le petit journal de notre village, construit avec des amis sur un serveur Minecraft. Ici, on raconte ce qui se passe : les nouvelles constructions, les événements, les exploits… et aussi les catastrophes.</p>
+    <p>Jonhy Italian News est le journal officiel de la plus vieille organisation du serveur. Nous ne prétendons pas être honnêtes. Nous prétendons être exacts, et nous avons les coffres pour le prouver.</p>
 
-    <h2>Notre mission</h2>
-    <p>Garder une trace de l'histoire du village, faire rire les copains et donner envie à tout le monde de continuer à construire ensemble.</p>
+    <h2>Notre doctrine</h2>
+    <p>La puissance ne se crie pas, elle se construit : une cabane en bois, un coffre bien placé, et le reste suit tout seul. Trois règles, jamais négociées — on ne touche pas aux coffres, on ne marche pas sur nos routes, on ne pose pas la mauvaise question.</p>
 
-    <h2>Le serveur</h2>
-    <p>Notre village est situé sur un serveur privé entre amis. Les nouveaux arrivants sont toujours les bienvenus (s'ils apportent des pommes dorées).</p>
+    <h2>Le territoire</h2>
+    <p>Notre village est situé sur un serveur privé entre amis. Les nouveaux arrivants sont les bienvenus, à deux conditions : ils apportent des pommes dorées, et ils signent. Tout le reste se négocie.</p>
 
     <h2>Nous contacter</h2>
-    <p>Une info à partager, une rumeur, un article à proposer ? Dis-le à Joartoxx directement sur le serveur ou sur notre Discord.</p>
+    <p>Une info à partager, une rumeur, un article à proposer ? Approaches-toi directement de Jonhy sur le serveur. Ou passe par notre Discord, mais sache que tout y est archivé, et que nous lisons tout.</p>
 
-    <a class="retour" href="index.html">← Retour à l'accueil</a>
+    <a class="retour" href="index.html"><span aria-hidden="true">←</span> Retour à l'accueil</a>
   </article>
 </main>
 
-<footer>
-  <p>© 2026 Joartoxx news — Le journal (très sérieux) de notre village Minecraft.</p>
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Jonhy Italian News — Le journal de la famille. Rien n'est jamais vraiment confidentiel.</p>
 </footer>
 
+<script src="app.js"></script>
 </body>
 </html>
